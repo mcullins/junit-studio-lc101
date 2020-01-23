@@ -57,4 +57,9 @@ public class BalancedBracketsTest {
     public void  singleBracketReturnsFalse(){
         assertFalse(BalancedBrackets.hasBalancedBrackets("]So Lonely"));
     }
+
+    @Test (expected = NullPointerException.class)
+    public void nullReturnsFalse(){
+        BalancedBrackets.hasBalancedBrackets(null);
+    }
 }
